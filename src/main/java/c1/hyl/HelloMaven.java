@@ -14,6 +14,7 @@ public class HelloMaven {//主程序 类
         System.out.println("hot-fix test");
         System.out.println(11111);
         System.out.println(2222+"github 提交");
+        System.out.println(333333+"github 提交");
     }
 
 
