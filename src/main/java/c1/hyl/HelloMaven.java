@@ -11,6 +11,7 @@ public class HelloMaven {//主程序 类
         System.out.println("hello git!222222222");
         System.out.println("hello git!333333");
         System.out.println("master test!");
+        System.out.println("hot-fix test");
     }
 
 
