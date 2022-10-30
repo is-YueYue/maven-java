@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!--maven模型的版本，目前版本（maven2和maven3）都是4.0.0-->
+  <modelVersion>4.0.0</modelVersion>
+  <!--
+      maven的坐标：唯一定位一个资源（jar包）
+        groupId：组织id,一般是公司域名的倒写
+                例如：www.baidu.com
+                倒写：com.baidu
+       artifactId：项目名（自定义，唯一）crm
+        com.baidu.crm
+        com.jd.crm
+       version：版本
+  -->
+  <groupId>c1.hyl</groupId>
+  <artifactId>03-maven-java</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+<!--配置属性-->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <!--自定义标签：统一管理依赖版本-->
+    <test.version>1.2.13</test.version>
+  </properties>
+  <!--依赖-->
+  <dependencies>
+    <!-- https://mvnrepository.com/-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>${test.version}</version>
+      <!--<scope>compile</scope>-->
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+
+    <!--插件-->
+    <plugins>
+      <!--编译插件：指定jdk版本，作用同properties中指定的版本一样-->
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+           <source>1.8</source><!--告诉maven编译时使用的jdk版本-->
+           <target>1.8</target><!--告诉maven执行时使用的jdk版本-->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
