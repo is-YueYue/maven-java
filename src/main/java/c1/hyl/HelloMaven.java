@@ -8,6 +8,7 @@ public class HelloMaven {//主程序 类
 
     public static void main(String[] args) {
         System.out.println("hello git!");
+        System.out.println("hello git!222222222");
     }
 
 
